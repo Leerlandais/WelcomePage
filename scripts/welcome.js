@@ -1,10 +1,14 @@
+const hiddenBox = document.getElementById("hiddenBox");
 const inputArea = document.querySelector("input");
+const myButton = document.getElementById("myButton");
 
-inputArea.addEventListener("change", function() {
+myButton.addEventListener('click', myFunction);
 
-if (!inputArea.checked){
+
+function myFunction () {
+    inputArea.checked = false;
+    myButton.style.display = "none";
     setTimeout(function () {
         window.location.href = "https://2023.webdev-cf2m.be/Lee/Site/";
     }, 2001);
 }
-});
